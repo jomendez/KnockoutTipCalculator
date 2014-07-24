@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.0.0.js"></script>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class='liveExample'>
+        <p>Bill Amount <input data-bind='value: billAmount, valueUpdate:"afterkeydown"' /></p>
+        <p>
+            Tip Percent (%) <input id="tipPercent" data-bind='value: tipPercent, valueUpdate:["afterkeydown","change"]' /> <button data-bind="click: $root.percent(10)">10%</button>
+            <button data-bind="click: $root.percent(15)">15%</button> <button data-bind="click: $root.percent(18)">18%</button><button data-bind="click: $root.percent(20)">20%</button>
+        </p>
+        <p>Tip Amount <input data-bind='value: tipAmount, valueUpdate:"afterkeydown"' /></p>
+        <p>Total Amount <input data-bind='value: totalAmount' /></p>
+        <p>split among <input data-bind='value: splitAmongObs, valueUpdate:"afterkeydown"' /></p>
+        <p>splited total <input data-bind='value: splitedTotal' /></p>
+    </div>
+    <script src="viewModel.js"></script>
+</body>
+</html>
